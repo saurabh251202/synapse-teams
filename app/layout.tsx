@@ -10,36 +10,37 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Synapse Teams — Visual Team Intelligence Platform',
-    template: '%s | Synapse Teams',
+    default: 'Saurabh Pathak — UX Designer | Frontend Developer | Product Enthusiast',
+    template: '%s | Saurabh Pathak Portfolio',
   },
   description:
-    'Synapse Teams helps organizations manage team performance, customer operations, onboarding, recruitment, escalations, and collaboration through an intelligent visual workspace.',
+    'Product-minded UX Designer and Frontend Developer with experience designing user-centered digital experiences across SaaS, EdTech, B2B, and FinTech domains.',
   keywords: [
-    'team management',
-    'SaaS',
-    'team intelligence',
-    'customer operations',
-    'recruitment',
-    'onboarding',
-    'escalation management',
-    'knowledge graph',
+    'Saurabh Pathak',
+    'UX Designer',
+    'Frontend Developer',
+    'Product Designer',
+    'SaaS Design',
+    'React Developer',
+    'Figma Prototyping',
+    'Customer Success',
+    'UX Research',
   ],
-  authors: [{ name: 'Synapse Teams' }],
-  creator: 'Synapse Teams',
+  authors: [{ name: 'Saurabh Pathak' }],
+  creator: 'Saurabh Pathak',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://synapse.teams',
-    title: 'Synapse Teams — Visual Team Intelligence Platform',
+    url: 'https://saurabhpathak.design',
+    title: 'Saurabh Pathak — UX Designer | Frontend Developer',
     description:
-      'The intelligent visual workspace for high-performance teams.',
-    siteName: 'Synapse Teams',
+      'Product-minded UX Designer and Frontend Developer designing intuitive digital experiences.',
+    siteName: 'Saurabh Pathak Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Synapse Teams',
-    description: 'Visual Team Intelligence Platform',
+    title: 'Saurabh Pathak Portfolio',
+    description: 'UX Designer & Frontend Developer Portfolio',
   },
   robots: {
     index: true,
@@ -54,7 +55,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   )
 }

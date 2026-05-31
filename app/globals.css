@@ -116,6 +116,29 @@
   100% { background-position: 0% 50%; }
 }
 
+/* ─── Light Mode Variable Overrides ─── */
+.light {
+  --color-synapse-bg: #f8fafc;
+  --color-synapse-surface: #ffffff;
+  --color-synapse-surface-2: #f1f5f9;
+  --color-synapse-border: #e2e8f0;
+  --color-synapse-border-2: #cbd5e1;
+
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-disabled: #94a3b8;
+
+  --shadow-glow-primary: 0 0 20px rgba(99, 102, 241, 0.1);
+  --shadow-glow-accent: 0 0 20px rgba(6, 182, 212, 0.1);
+  --shadow-card: 0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.03);
+  --shadow-elevated: 0 20px 40px -15px rgba(15, 23, 42, 0.12);
+
+  --color-primary-muted: rgba(99, 102, 241, 0.06);
+  --color-accent-muted: rgba(6, 182, 212, 0.06);
+  --color-violet-muted: rgba(139, 92, 246, 0.06);
+}
+
 /* ─── Base Reset ─── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -171,12 +194,18 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--color-synapse-border);
 }
+.light .glass {
+  background: rgba(255, 255, 255, 0.65);
+}
 
 .glass-surface {
   background: rgba(17, 17, 37, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--color-synapse-border-2);
+}
+.light .glass-surface {
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .gradient-text {
@@ -188,6 +217,12 @@ body {
 
 .gradient-text-primary {
   background: linear-gradient(135deg, #e2e8f0 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.light .gradient-text-primary {
+  background: linear-gradient(135deg, #0f172a 0%, #4f46e5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
